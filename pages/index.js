@@ -69,9 +69,9 @@ export default function Home() {
           {students.map(student => (studentPill(student.firstName, student.lastName)))}
           <AddNewStudent />
         </div>
-      </main>
-
+      </main> 
   
+  {/* Testing testing */}
     </div>
   )
 }
