@@ -1,60 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import studentPill from '../components/StudentPill'
+import StudentPill from '../components/StudentPill'
 import AddNewStudent from '../components/AddNewStudent'
+import FlexContainer from '../components/FlexContainer'
+import {students} from '../dummyData'
 
-const students = [
-  {
-    firstName: 'John',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jane',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jack',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jill',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Joe',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jenny',
-    lastName: 'Doe',
-   },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-  {
-    firstName: 'Jax',
-    lastName: 'Doe',
-  },
-]
+
+
 
 export default function Home() {
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -65,19 +20,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Log In</h1>
-        <div className={styles.flexContainer}>
-          
-          {/* Want to display student pill in 3 x 9 format with table feature*/}
-          {/* <table> */}
-            {/* <tbody> */}
-              {students.map(student => (studentPill(student.firstName, student.lastName)))}
-            {/* </tbody> */}
-          {/* </table> */}
-          
-          {/* Spacing break in page*/}
-          {/* <br> </br> */}
-          
-          <AddNewStudent />
+        <div>  
+          <FlexContainer> {/* Container for all students and AddNewStudent button */} 
+            { students.map( student => <StudentPill student={student} /> ) }
+          </FlexContainer>
         </div>
       </main> 
   

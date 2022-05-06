@@ -1,0 +1,13 @@
+.FlexContainer { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    /* 
+        Units
+    1em = 16px 
+    px = fixed pixle amount
+    em = relation unit to its parent container
+    rem = relational unit to its root
+    
+    */
+}

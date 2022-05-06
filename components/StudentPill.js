@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from '../styles/StudentPill.module.css'
 
-function studentPill(firstName, lastName) {
+function StudentPill({student}) {
   return (
     <div className={styles.pill}>
-      {`${firstName} ${lastName[0]}`}
+      {`${student.firstName} ${student.lastName[0]}`}
     </div>
   )
 }
 
-export default studentPill
+export default StudentPill
 
