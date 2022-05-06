@@ -4,7 +4,7 @@ import styles from '../styles/AddNewStudent.module.css'
 function AddNewStudent() {
 
   return (
-    <div className={styles.addButton}>+</div>
+    <div className={styles.addButton}> + </div>
   )
 }
 

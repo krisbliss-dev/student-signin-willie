@@ -66,7 +66,17 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Log In</h1>
         <div className={styles.flexContainer}>
-          {students.map(student => (studentPill(student.firstName, student.lastName)))}
+          
+          {/* Want to display student pill in 3 x 9 format with table feature*/}
+          {/* <table> */}
+            {/* <tbody> */}
+              {students.map(student => (studentPill(student.firstName, student.lastName)))}
+            {/* </tbody> */}
+          {/* </table> */}
+          
+          {/* Spacing break in page*/}
+          {/* <br> </br> */}
+          
           <AddNewStudent />
         </div>
       </main> 
